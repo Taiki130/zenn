@@ -6,5 +6,6 @@ kubernetes完全ガイド 読書メモ
 - 「kubectl create」と「kubectl apply」を混在して使用すると、「kubectl apply」実行時に差分を検出しきれないことがあるため
 
 ###
-
-
+Server-sideapply
+- 様々なシステムコンポーネントがリソースの フィールドを自動的に書き換えることがある
+- Server-side apply を利用することでこれらの衝突を検知することが可能
