@@ -17,3 +17,12 @@ Pod の再起動
 ```
 % kubectl rollout restart deployment <name>
 ```
+
+###
+リソースの状態のチェックと待機(wait)
+- kubectl コマンドを連続的に実行してリソースを操作していく際に、次のコマンドを実行する前にそ れまでに操作したリソースが意図する状態になってから次のコマンドを実行したいケース
+```
+# sample-podが正常に起動する(Ready状態になる)まで待機する
+$ kubectl wait --for=condition=Ready pod/sample-pod
+pod/sample-pod condition met
+```
