@@ -9,3 +9,11 @@ kubernetes完全ガイド 読書メモ
 Server-sideapply
 - 様々なシステムコンポーネントがリソースの フィールドを自動的に書き換えることがある
 - Server-side apply を利用することでこれらの衝突を検知することが可能
+
+### 
+Pod の再起動
+- Pod の起動時の処理 を再実行したい時
+- Secret リソースで参照されている環境変数を更新したい時
+```
+% kubectl rollout restart deployment <name>
+```
