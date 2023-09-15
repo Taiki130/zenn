@@ -57,5 +57,9 @@ pod/sample-pod condition met
 - システムが利用するラベル
 
 ###
-Pruneによるリソースの削除(--pruneオプション)
 CI/CD パイプラインでは更新されたマニフェストに対して「kubectl apply --prune」コマンドを実行し続けるだけで、削除されたリソースも 自動的に削除することが可能になる
+
+###
+Pod定義を編集(環境変数EDITORに定義されたエディターが起動)
+kubectl edit pod sample-pod
+
