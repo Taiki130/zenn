@@ -74,3 +74,5 @@ kubectl set image リソース種類 リソース名 コンテナ名=コンテ�
 # クラスタの登録情報とマニフェストの差分を確認 
 $ kubectl diff -f sample-pod.yaml
 ```
+###
+「kubectl debug」コマンドで、Pod に追加の一時的なコンテナ(Ephemeral Container) を起動し、そのコンテナを使ってデバッグやトラブルシューティングを行える
