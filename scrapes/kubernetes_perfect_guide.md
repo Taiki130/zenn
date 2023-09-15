@@ -76,3 +76,6 @@ $ kubectl diff -f sample-pod.yaml
 ```
 ###
 「kubectl debug」コマンドで、Pod に追加の一時的なコンテナ(Ephemeral Container) を起動し、そのコンテナを使ってデバッグやトラブルシューティングを行える
+
+###
+「kubectl port-forward」コマンドでkubectl を実行している手元のマシンから特定の Pod へトラフィックを転送する
