@@ -68,3 +68,9 @@ kubectl edit pod sample-pod
 ```
 kubectl set image リソース種類 リソース名 コンテナ名=コンテナイメージ指定(:コンテナイメージのタグ指定)
 ```
+
+###
+```
+# クラスタの登録情報とマニフェストの差分を確認 
+$ kubectl diff -f sample-pod.yaml
+```
