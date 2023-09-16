@@ -83,3 +83,12 @@ $ kubectl diff -f sample-pod.yaml
 ###
 - リソースなどを作成した際の HTTP Request / Response の概要を表示する場合は、「-v=6」以降のログレベルで出力
 - Request Body / Response Body まで確認する場合は、「-v=8」以降のログレベルで出力
+
+###
+Pod が起動しない場合のデバッグ
+- 「kubectl logs」コマンドを使って、コンテナが出力しているログを確認する
+    - 主にアプリケーション側に問題がある場合
+- 「kubectl describe」コマンドで表示される Events の項目を確認する
+    - 主に Kubernetes の設定やリソースの設定に関して問題がある場合
+- 「kubectl run」コマンドを使って、実際にコンテナのシェル上で確認する
+    - 主にコンテナ内の環境やアプリケーションに問題がある場合
