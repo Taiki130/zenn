@@ -79,3 +79,7 @@ $ kubectl diff -f sample-pod.yaml
 
 ###
 「kubectl port-forward」コマンドでkubectl を実行している手元のマシンから特定の Pod へトラフィックを転送する
+
+###
+- リソースなどを作成した際の HTTP Request / Response の概要を表示する場合は、「-v=6」以降のログレベルで出力
+- Request Body / Response Body まで確認する場合は、「-v=8」以降のログレベルで出力
