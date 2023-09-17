@@ -95,3 +95,15 @@ Pod が起動しない場合のデバッグ
 
 ###
 ホストのネットワークを利用する設定(spec.hostNetwork)を有効化することで、ホスト上でただプロセスを起動するのと同等のネットワーク構成(IP アドレス、DNS 設定、hosts 設定など)で Pod を起動させることが可能
+
+###
+deploymentで変更履歴を確認するには、「kubectl rollout history」コマンドを利用
+該当リビジョンのより詳細な情報を取得するには、「--revision」オプションを指定
+```
+kubectl rollout history deployment sample-deployment --revision 1
+```
+ロールバックするには、「kubectl rollout undo」を利用
+```
+kubectl rollout undo deployment sample-deployment --to-revision 1
+```
+実際にはこのロールバック機能を使用するケースは多くない。CI/CD のパイプラインからロールバックする場合、「kubectl rollout」コマンドよりも、古いマニフェストを再度「kubectl apply」コマンドを実行して適用したほうが相性が良いから
