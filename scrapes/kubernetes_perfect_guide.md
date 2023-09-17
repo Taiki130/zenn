@@ -107,3 +107,6 @@ kubectl rollout history deployment sample-deployment --revision 1
 kubectl rollout undo deployment sample-deployment --to-revision 1
 ```
 実際にはこのロールバック機能を使用するケースは多くない。CI/CD のパイプラインからロールバックする場合、「kubectl rollout」コマンドよりも、古いマニフェストを再度「kubectl apply」コマンドを実行して適用したほうが相性が良いから
+
+###
+StatefulSet では、spec.volumeClaimTemplates を指定することができる。これにより、StatefulSet によって作成される各 Pod に対して、PersistentVolumeClaim(PersistentVolume 要求)を設定できる
