@@ -119,3 +119,10 @@ completions: 5 parallelism: 3 backoffLimit: 5
 ###
 Job は終了後に削除されず残り続けてしまう
 「spec.ttlSecondsAfterFinished」を設定することで、Job が終了後に一定秒数経過で削除されるように設定することが可能
+
+###
+Cronjobの一時停止
+```
+kubectl patch cronjob sample-cronjob -p '{"spec":{"suspend":true}}'
+```
+
