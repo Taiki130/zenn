@@ -131,3 +131,11 @@ CronJob を任意のタイミングで実行
 ```
 kubectl create job sample-job-from-cronjob --from cronjob/sample-cronjob
 ```
+
+###
+同時実行に関するポリシーは spec.concurrencyPolicy に指定
+```
+Allow(デフォルト) 同時実行に対して制限を行わない
+Forbid 前の Job が終了していない場合、次の Job は実行しない(同時実行を行わない)
+Replace 前の Job をキャンセルし、Job を開始する
+```
