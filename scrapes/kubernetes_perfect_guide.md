@@ -126,3 +126,8 @@ Cronjobの一時停止
 kubectl patch cronjob sample-cronjob -p '{"spec":{"suspend":true}}'
 ```
 
+###
+CronJob を任意のタイミングで実行
+```
+kubectl create job sample-job-from-cronjob --from cronjob/sample-cronjob
+```
