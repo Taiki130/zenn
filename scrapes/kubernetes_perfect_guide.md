@@ -110,3 +110,8 @@ kubectl rollout undo deployment sample-deployment --to-revision 1
 
 ###
 StatefulSet では、spec.volumeClaimTemplates を指定することができる。これにより、StatefulSet によって作成される各 Pod に対して、PersistentVolumeClaim(PersistentVolume 要求)を設定できる
+
+###
+jobにおける重要なパラメータ
+completions: 5 parallelism: 3 backoffLimit: 5
+上記は3 並列で実行/成功数が 5 になったら終了/失敗数が 5 に なったら終了という意味
