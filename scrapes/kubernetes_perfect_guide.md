@@ -115,3 +115,7 @@ StatefulSet では、spec.volumeClaimTemplates を指定することができる
 jobにおける重要なパラメータ
 completions: 5 parallelism: 3 backoffLimit: 5
 上記は3 並列で実行/成功数が 5 になったら終了/失敗数が 5 に なったら終了という意味
+
+###
+Job は終了後に削除されず残り続けてしまう
+「spec.ttlSecondsAfterFinished」を設定することで、Job が終了後に一定秒数経過で削除されるように設定することが可能
