@@ -191,3 +191,7 @@ NodePort は、すべての Kubernetes Node の IP アドレス:Port で受信�
 - spec.ports[].port には ClusterIP で受け付ける Port 番号
 - spec.ports[].targetPort は転送先のコンテナの Port 番号
 - spec.ports[].nodePort には 全 Kubernetes Node で受け付ける Port 番号
+
+###
+LoadBalancer Service は、外部のロードバランサを利用するため、Kubernetes クラスタが構築されているインフラがこの仕組みに対応している必要がある
+
