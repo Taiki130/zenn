@@ -185,3 +185,9 @@ spec.ports[].targetPort は転送先のコンテナの Port 番号を指定
 ```
 kubectl get nodes -o custom-columns="NAME:{metadata.name},IP:{status.addresses[].address}"
 ```
+
+###
+NodePort は、すべての Kubernetes Node の IP アドレス:Port で受信したトラフィックをコンテナに転送する形で、外部疎通性を確立する
+- spec.ports[].port には ClusterIP で受け付ける Port 番号
+- spec.ports[].targetPort は転送先のコンテナの Port 番号
+- spec.ports[].nodePort には 全 Kubernetes Node で受け付ける Port 番号
