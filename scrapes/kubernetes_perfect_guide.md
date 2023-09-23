@@ -172,3 +172,16 @@ Kubernetes の文脈では、Service に属する Pod を列挙したり、Servi
 ###
 「type: ClusterIP」を指定することで、ClusterIP Service を作成することが可能
 spec.ports[].port には ClusterIP で受け付ける Port 番号を、spec.ports[].targetPort は転送先の コンテナの Port 番号を指定
+
+###
+- ExternalIP Service は、特定の Kubernetes Node の IP アドレス:Port で受信したトラフィックを、 コンテナに転送する形で外部疎通性を確立する Service
+    - 特別な事情がない場合は、 ExternalIP Service の代わりに後述する NodePort Service の利用を検討する
+- ExternalIP は「type: ExternalIP」を指定しない
+- spec.externalIPs には Kubernetes Node の IP(10.240.0.7 など)を、
+spec.ports[].port には Kubernetes Node の IP および ClusterIP で受け付ける Port 番号を、
+spec.ports[].targetPort は転送先のコンテナの Port 番号を指定
+- ExternalIP に利用可能な IP アドレスは、ノードの情報から確認することが可能
+
+```
+kubectl get nodes -o custom-columns="NAME:{metadata.name},IP:{status.addresses[].address}"
+```
