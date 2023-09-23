@@ -158,4 +158,7 @@ Kubernetes の文脈では、Service に属する Pod を列挙したり、Servi
 - 環境変数を利用したサービスディスカバリ
     - Pod 内からは、環境変数でも同じ Namespace のサービスが確認できるようになっている
 - DNS A レコードを利用したサービスディスカバリ
+    - 基本的に自動的に払い出された IP アドレスに紐づく DNS 名を使用するのが望ましい
+    - 実際に登録されている正式な FQDN は、[Service 名].[Namespace 名].svc.cluster.local となってる
+    - 同一 Namespace である場合には、「sample-clusterip」のように Service 名だけで名前解決ができますが、 異なる Namespace の場合には「sample-clusterip.default」のように Namespace 名をつけて名前解決 を行う
 - DNS SRV レコードを利用したサービスディスカバリ
