@@ -168,3 +168,7 @@ Kubernetes の文脈では、Service に属する Pod を列挙したり、Servi
 
 ###
 通常クラスタ内 DNS に対して名前解決のリクエストを送りますが、大規模なクラスタでのパフォー マンスを向上させるために各ノードのローカル上に DNS キャッシュサーバを用意する仕組みがある
+
+###
+「type: ClusterIP」を指定することで、ClusterIP Service を作成することが可能
+spec.ports[].port には ClusterIP で受け付ける Port 番号を、spec.ports[].targetPort は転送先の コンテナの Port 番号を指定
