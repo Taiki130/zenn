@@ -165,3 +165,6 @@ Kubernetes の文脈では、Service に属する Pod を列挙したり、Servi
 - DNS SRV レコードを利用したサービスディスカバリ
     - SRV レコードは、Port 名と Protocol を利用することで、サービスを 提供している Port 番号を含めたエンドポイントを DNS で解決する仕組み
     - `[_Service の Port 名].[_Protocol].[Service 名].[Namespace 名].svc.cluster.local`
+
+###
+通常クラスタ内 DNS に対して名前解決のリクエストを送りますが、大規模なクラスタでのパフォー マンスを向上させるために各ノードのローカル上に DNS キャッシュサーバを用意する仕組みがある
