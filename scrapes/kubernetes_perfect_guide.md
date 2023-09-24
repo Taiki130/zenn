@@ -206,3 +206,13 @@ NodePort Service と LoadBalancer Service では Kubernetes Node 上に到達し
 
 spec.externalTrafficPolicy が Cluster（デフォルト） の場合には、LoadBalancer Service と NodePort Service の 両方とも外部からそのノードに到達したリクエストは、3 つの Pod にほぼ均等に転送される
 spec.externalTrafficPolicy が Local の場合には、LoadBalancer Service と NodePort Service の両方とも外部からそのノードに到達したリクエストは、そのノード上にある Pod にのみ転送される
+
+###
+externalTrafficPolicy を利用することでノード間の通信を防ぐことが可能なため、一部同等の問題 を解決することが可能ですが下記のような問題が存在する
+- ClusterIP では利用できない
+- 同一ノード内にしか転送範囲を絞ることができない
+- 同一ノードに Pod が起動していない場合はタイムアウト待ちになる
+
+Topology-aware Service Routing にはどのトポロジの範囲に転送を試みるかを優先度順に指定していく
+例えば、第一優先度「同一ノード」、第二優先度「同一ゾーン」、第三優先度「いずれかの Pod」といったように設定する
+「kubernetes.io/hostname」 「topology.kubernetes.io/zone」「topology.kubernetes.io/region」
