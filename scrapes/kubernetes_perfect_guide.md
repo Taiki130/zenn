@@ -195,3 +195,14 @@ NodePort は、すべての Kubernetes Node の IP アドレス:Port で受信�
 ###
 LoadBalancer Service は、外部のロードバランサを利用するため、Kubernetes クラスタが構築されているインフラがこの仕組みに対応している必要がある
 
+###
+Service にはセッションアフィニティを有効化することができる
+
+###
+NodePort Service と LoadBalancer Service では Kubernetes Node 上に到達したリクエストは、 さらにノードをまたいだ Pod へもロードバランシングされるようになっており、不必要な二段階ロードバランシングが行われてしまう
+- 均一にリクエストが分散しやすい
+- 不要なレイテンシのオーバーヘッドが生じてしまう
+- バランシングが行われる際に NAT されるため送信元 IP アドレスが消失する
+
+spec.externalTrafficPolicy が Cluster（デフォルト） の場合には、LoadBalancer Service と NodePort Service の 両方とも外部からそのノードに到達したリクエストは、3 つの Pod にほぼ均等に転送される
+spec.externalTrafficPolicy が Local の場合には、LoadBalancer Service と NodePort Service の両方とも外部からそのノードに到達したリクエストは、そのノード上にある Pod にのみ転送される
