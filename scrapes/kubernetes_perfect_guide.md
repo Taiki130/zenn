@@ -216,3 +216,13 @@ externalTrafficPolicy を利用することでノード間の通信を防ぐこ�
 Topology-aware Service Routing にはどのトポロジの範囲に転送を試みるかを優先度順に指定していく
 例えば、第一優先度「同一ノード」、第二優先度「同一ゾーン」、第三優先度「いずれかの Pod」といったように設定する
 「kubernetes.io/hostname」 「topology.kubernetes.io/zone」「topology.kubernetes.io/region」
+
+###
+Headless Service は、対象となる個々の Pod の IP アドレスが直接返ってくる Service
+Headless Service を作成するには、下記の 2 つの条件を満たす必要がある
+- Service の spec.type が ClusterIP であること
+- Service の spec.clusterIP が None であること
+
+StatefulSetと組み合わせて利用する場合、特定の条件下で Pod 名で名前解決を行うこともできる
+- [オプション] Service の metadata.name が StatefulSet の spec.serviceName と同じであること
+
