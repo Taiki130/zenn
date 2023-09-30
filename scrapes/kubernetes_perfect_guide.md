@@ -226,3 +226,8 @@ Headless Service を作成するには、下記の 2 つの条件を満たす必
 StatefulSetと組み合わせて利用する場合、特定の条件下で Pod 名で名前解決を行うこともできる
 - [オプション] Service の metadata.name が StatefulSet の spec.serviceName と同じであること
 
+###
+ExternalName Service は、通常の Service リソースとは異なり、Service 名の名前解決に対して外部のドメイン宛の CNAME を返す
+使用する場面
+- 別の名前を設定したい場合
+- クラスタ内からのエンドポイントを切り替えやすくしたい場合
