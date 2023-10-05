@@ -227,12 +227,23 @@ StatefulSetと組み合わせて利用する場合、特定の条件下で Pod �
 - [オプション] Service の metadata.name が StatefulSet の spec.serviceName と同じであること
 
 ###
-ExternalName Service は、通常の Service リソースとは異なり、Service 名の名前解決に対して外部のドメイン宛の CNAME を返す
-使用する場面
-- 別の名前を設定したい場合
-- クラスタ内からのエンドポイントを切り替えやすくしたい場合
+- ExternalName Service は、通常の Service リソースとは異なり、Service 名の名前解決に対して外部のドメイン宛の CNAME を返す
+    - 使用する場面
+        - 別の名前を設定したい場合
+        - クラスタ内からのエンドポイントを切り替えやすくしたい場合
 
 ###
-None-Selector Service では、Service 名で名前解決を行うと自分で指定したメンバに対してロードバランシングを行う
-Kubernetes 内に自由な宛先でここまで説明した形式のロードバランサが作れる機能
-イメージ的にはクライアントサイドロードバランシング用のエンドポイントを提供するService
+- None-Selector Service では、Service 名で名前解決を行うと自分で指定したメンバに対してロードバランシングを行う
+- Kubernetes 内に自由な宛先でここまで説明した形式のロードバランサが作れる機能
+    - 基本的には ClusterIP によるクラスタ内 ロードバランサで利用するケースが大半
+- イメージ的にはクライアントサイドロードバランシング用のエンドポイントを提供するService
+    
+
+###
+Kubernetes で環境変数を渡す際には、Pod テンプレートに env または envFrom を指定する
+下記の 5 つの情報源から環境変数を埋め込むことが可能
+- 静的設定
+- Pod の情報
+- コンテナの情報
+- Secret リソースの機密情報
+- ConfigMap リソースの設定値
