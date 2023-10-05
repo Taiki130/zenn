@@ -247,3 +247,7 @@ Kubernetes で環境変数を渡す際には、Pod テンプレートに env ま
 - コンテナの情報
 - Secret リソースの機密情報
 - ConfigMap リソースの設定値
+
+### 
+Secret を定義しているマニフェストは base64 でエンコードされているが、暗号化されているわけではないため、マニフェストを Git リポジトリ上などにアップロードすることはできない
+Secret が定義されたマニフェストを暗号化する kubesec / SealedSecret / ExternalSecret といったオープンソースソフトウェアもある
