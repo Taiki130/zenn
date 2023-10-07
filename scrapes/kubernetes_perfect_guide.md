@@ -284,3 +284,11 @@ kubectl create secret generic --save-config sample-db-auth \
 
 ###
 マニフェストから作成する場合、base64 でエンコードした値をマニフェストに埋め込む
+
+###
+証明書として利用する Secret を作成する場合は、type に tls を指定
+```
+kubectl create secret tls --save-config tls-sample --key ~/tls.key --cert ~/tls.crt
+```
+
+###
