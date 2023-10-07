@@ -292,3 +292,11 @@ kubectl create secret tls --save-config tls-sample --key ~/tls.key --cert ~/tls.
 ```
 
 ###
+Docker レジストリの認証用の Secret を作成する場合は、type に docker-registry を指定
+```
+kubectl create secret docker-registry --save-config sample-registry-auth \
+--docker-server=REGISTRY_SERVER \ 
+--docker-username=REGISTRY_USER \ 
+--docker-password=REGISTRY_USER_PASSWORD \ 
+--docker-email=REGISTRY_USER_EMAIL
+```
