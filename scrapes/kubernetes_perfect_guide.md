@@ -251,3 +251,11 @@ Kubernetes で環境変数を渡す際には、Pod テンプレートに env ま
 ### 
 Secret を定義しているマニフェストは base64 でエンコードされているが、暗号化されているわけではないため、マニフェストを Git リポジトリ上などにアップロードすることはできない
 Secret が定義されたマニフェストを暗号化する kubesec / SealedSecret / ExternalSecret といったオープンソースソフトウェアもある
+
+###
+一般的なスキーマレスの Secret を作成する場合は、type に Opaque を指定
+- kubectl でファイルから値を参照して作成する(--from-file)
+- kubectl で envfile から値を参照して作成する(--from-env-file)
+- kubectl で直接値を渡して作成する(--from-literal)
+- マニフェストから作成する(-f)
+
