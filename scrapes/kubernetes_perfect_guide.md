@@ -281,3 +281,6 @@ kubectl を使って直接値を渡して作成するには、「--from-literal�
 kubectl create secret generic --save-config sample-db-auth \
 --from-literal=username=root --from-literal=password=rootpassword
 ```
+
+###
+マニフェストから作成する場合、base64 でエンコードした値をマニフェストに埋め込む
