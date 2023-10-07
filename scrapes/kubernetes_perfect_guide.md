@@ -261,3 +261,15 @@ Secret が定義されたマニフェストを暗号化する kubesec / SealedSe
 
 ###
 kubectl を使ってファイルから値を参照して作成する場合には、「--from-file」オプションを指定する
+```
+ kubectl create secret generic --save-config sample-db-auth \
+--from-file=./username --from-file=./password
+
+kubectl get secret sample-db-auth -o json | jq -r .data.username | base64 --decode root
+```
+###
+一つのファイルから一括で作成する場合には、envfile から作成する方法もある
+```
+kubectl create secret generic --save-config sample-db-auth \
+--from-env-file ./env-secret.txt
+```
