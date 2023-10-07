@@ -275,3 +275,9 @@ kubectl create secret generic --save-config sample-db-auth \
 --from-env-file ./env-secret.txt
 ```
 
+###
+kubectl を使って直接値を渡して作成するには、「--from-literal」オプションを使って作成する
+```
+kubectl create secret generic --save-config sample-db-auth \
+--from-literal=username=root --from-literal=password=rootpassword
+```
