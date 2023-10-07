@@ -309,3 +309,15 @@ Secret をコンテナから利用する場合、大きく分けて下記の 2 �
 - Volume としてマウントする 
     - Secret の特定の Key のみ 
     - Secret のすべての Key
+
+###
+ConfigMap とは、設定情報などの Key-Value で保持できるデータを保存しておくリソース
+nginx.conf や httpd.conf のような設定ファイル自体も保存可能
+
+ConfigMap をコンテナから利用する場合にも、大きく分けて下記の 2 つのパターン
+- 環境変数として渡す
+    - ConfigMap の特定の Key のみ
+    - ConfigMap のすべての Key
+- Volume としてマウントする
+    - ConfigMap の特定の Key のみ
+    - ConfigMap のすべての Key
