@@ -259,3 +259,5 @@ Secret が定義されたマニフェストを暗号化する kubesec / SealedSe
 - kubectl で直接値を渡して作成する(--from-literal)
 - マニフェストから作成する(-f)
 
+###
+kubectl を使ってファイルから値を参照して作成する場合には、「--from-file」オプションを指定する
