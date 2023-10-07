@@ -300,3 +300,12 @@ kubectl create secret docker-registry --save-config sample-registry-auth \
 --docker-password=REGISTRY_USER_PASSWORD \ 
 --docker-email=REGISTRY_USER_EMAIL
 ```
+
+###
+Secret をコンテナから利用する場合、大きく分けて下記の 2 つのパターン
+- 環境変数として渡す
+    - Secret の特定の Key のみ
+    - Secret のすべての Key
+- Volume としてマウントする 
+    - Secret の特定の Key のみ 
+    - Secret のすべての Key
