@@ -321,3 +321,9 @@ ConfigMap をコンテナから利用する場合にも、大きく分けて下�
 - Volume としてマウントする
     - ConfigMap の特定の Key のみ
     - ConfigMap のすべての Key
+
+###
+Secret と ConfigMapの大きな違いは、Secret が機密情報を扱うためのリソース
+- Secret のデータは、Kubernetes Master が利用している分散 KVS(Key-Value Store)の etcd に保存されている
+- 実際に Secret を利 用する Pod がある場合のみ、etcd から Kubernetes Node にデータを送る
+- Kubernetes Node 上には永続的にデータが残らないように、Secret のデータは tmpfs 領域(メモリ上に構築される一時的なファイルシステム)に保持されるようになっている
