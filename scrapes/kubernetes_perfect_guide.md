@@ -379,3 +379,7 @@ Dynamic Provisioning を使った PersistentVolumeClaim の場合、PersistentVo
 
 ###
 StorageClass には volumeBindingMode の設定項目が用意されており、WaitForFirstConsumer を指定することで、実際に Pod にアタッチされる直前のタイミングで PersistentVolume が作成され、 紐づけられるようになる
+
+###
+StatefulSet でのワークロードでは、永続化されるデータ領域を利用することが多いため、spec.volumeClaimTemplate の項目がある
+volumeClaimTemplate を利用すると、 PersistentVolumeClaim を別途定義する必要がなくなり、自動的に PersistentVolumeClaim を作成していくことが可能
