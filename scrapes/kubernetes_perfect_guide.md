@@ -383,3 +383,6 @@ StorageClass には volumeBindingMode の設定項目が用意されており、
 ###
 StatefulSet でのワークロードでは、永続化されるデータ領域を利用することが多いため、spec.volumeClaimTemplate の項目がある
 volumeClaimTemplate を利用すると、 PersistentVolumeClaim を別途定義する必要がなくなり、自動的に PersistentVolumeClaim を作成していくことが可能
+
+###
+subPath は Volume をマウントする際に、特定のディレクトリをルートとしてマウントする機能
