@@ -376,3 +376,6 @@ Reclaim Policy は、PersistentVolume を利用し終わった後の処理方法
 Dynamic Provisioning を使った PersistentVolumeClaim の場合、PersistentVolumeClaim が発行されたタイミングで動的に PersistentVolume を作成して、割り当てる
 - 事前に PersistentVolume を作成する必要がない
 - 容量の無駄が生じない
+
+###
+StorageClass には volumeBindingMode の設定項目が用意されており、WaitForFirstConsumer を指定することで、実際に Pod にアタッチされる直前のタイミングで PersistentVolume が作成され、 紐づけられるようになる
