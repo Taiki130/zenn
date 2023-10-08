@@ -340,3 +340,6 @@ emptyDir は、Pod 用の一時的なディスク領域として利用可能
 
 ###
 hostPath は、Kubernetes Node 上の領域をコンテナにマッピングするプラグイン
+
+###
+downwardAPI は、Pod の情報などをファイルとして配置するためのプラグイン
