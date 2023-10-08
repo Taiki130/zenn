@@ -350,3 +350,11 @@ projected は、Secret / ConfigMap / downwardAPI / serviceAccountToken のボリ
 ###
 PersistentVolume の 種類がわからなくなってしまうため、type / environment / speed などのラベルをつけていくことが推奨
 
+###
+アクセスモード
+- ReadWriteOnce(RWO)
+    -  単一ノードから Read / Write が可能
+- ReadOnlyMany(ROX)
+    - 複数ノードから Read が可能
+- ReadWriteMany(RWX)
+    - 複数ノードから Read / Write が可能
