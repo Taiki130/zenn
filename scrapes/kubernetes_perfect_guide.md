@@ -327,3 +327,8 @@ Secret と ConfigMapの大きな違いは、Secret が機密情報を扱うた�
 - Secret のデータは、Kubernetes Master が利用している分散 KVS(Key-Value Store)の etcd に保存されている
 - 実際に Secret を利 用する Pod がある場合のみ、etcd から Kubernetes Node にデータを送る
 - Kubernetes Node 上には永続的にデータが残らないように、Secret のデータは tmpfs 領域(メモリ上に構築される一時的なファイルシステム)に保持されるようになっている
+
+###
+- Volume はあらかじめ用意された利用可能なボリューム(ホストの領域/ NFS / iSCSI / Ceph)などを、マニフェストに直接指定することで利用可能にするもの
+- PersistentVolume は、外部の永続ボリュームを提供するシステムと連携して、新規の ボリュームの作成や、既存のボリュームの削除などを行うことが可能
+- PersistentVolumeClaim は、その名のとおり作成された PersistentVolume リソースの中からアサインするためのリソース
