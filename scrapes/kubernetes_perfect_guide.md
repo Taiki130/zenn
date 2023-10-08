@@ -371,3 +371,8 @@ Reclaim Policy は、PersistentVolume を利用し終わった後の処理方法
     - PersistentVolume のデータを削除(rm -rf ./*)し、再利用可能な状態にします
     - 他の PersistentVolumeClaim によって再度マウントされます
     - 将来の Kubernetes にて廃止が検討されているため、Dynamic Propvisioning を利用するようにしてください
+
+###
+Dynamic Provisioning を使った PersistentVolumeClaim の場合、PersistentVolumeClaim が発行されたタイミングで動的に PersistentVolume を作成して、割り当てる
+- 事前に PersistentVolume を作成する必要がない
+- 容量の無駄が生じない
