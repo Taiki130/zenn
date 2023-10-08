@@ -343,3 +343,6 @@ hostPath は、Kubernetes Node 上の領域をコンテナにマッピングす�
 
 ###
 downwardAPI は、Pod の情報などをファイルとして配置するためのプラグイン
+
+###
+projected は、Secret / ConfigMap / downwardAPI / serviceAccountToken のボリュームマウントを 1 箇所のディレクトリに集約するプラグイン
