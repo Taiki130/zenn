@@ -358,3 +358,16 @@ PersistentVolume の 種類がわからなくなってしまうため、type / e
     - 複数ノードから Read が可能
 - ReadWriteMany(RWX)
     - 複数ノードから Read / Write が可能
+
+###
+Reclaim Policy は、PersistentVolume を利用し終わった後の処理方法(破棄するか、再利用するか など)を制御するポリシー
+- Delete
+    - PersistentVolume の実体(GCP の永続ディスクなど)が削除されます
+    - GCP / AWS / OpenStack などで確保される外部ボリュームの Dynamic Provisioning 時に利用されることが多い
+- Retain
+    - PersistentVolume の実体(GCP の永続ディスクなど)を消さずに保持します
+    - 他の PersistentVolumeClaim によって、この PersistentVolume が再度マウントされることはありません
+-  Recycle(非推奨)
+    - PersistentVolume のデータを削除(rm -rf ./*)し、再利用可能な状態にします
+    - 他の PersistentVolumeClaim によって再度マウントされます
+    - 将来の Kubernetes にて廃止が検討されているため、Dynamic Propvisioning を利用するようにしてください
