@@ -346,3 +346,7 @@ downwardAPI は、Pod の情報などをファイルとして配置するため�
 
 ###
 projected は、Secret / ConfigMap / downwardAPI / serviceAccountToken のボリュームマウントを 1 箇所のディレクトリに集約するプラグイン
+
+###
+PersistentVolume の 種類がわからなくなってしまうため、type / environment / speed などのラベルをつけていくことが推奨
+
