@@ -392,3 +392,6 @@ ResourceQuota を利用することで各 Namespace ごとに、すなわち仮�
 
 ###
 HorizontalPodAutoscaler は、Deployment / ReplicaSet / ReplicationController のレプリカ数 を CPU 負荷などに応じて自動的にスケールさせるリソース
+
+###
+VerticalPodAutoscaler は、コンテ ナに割り当てる CPU /メモリのリソースの割り当てを自動的にスケールさせる機能
