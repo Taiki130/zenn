@@ -389,3 +389,6 @@ subPath は Volume をマウントする際に、特定のディレクトリを�
 
 ###
 ResourceQuota を利用することで各 Namespace ごとに、すなわち仮想 Kubernetes クラスタごと に利用可能なリソースを制限することが可能
+
+###
+HorizontalPodAutoscaler は、Deployment / ReplicaSet / ReplicationController のレプリカ数 を CPU 負荷などに応じて自動的にスケールさせるリソース
