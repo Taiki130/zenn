@@ -395,3 +395,6 @@ HorizontalPodAutoscaler は、Deployment / ReplicaSet / ReplicationController �
 
 ###
 VerticalPodAutoscaler は、コンテ ナに割り当てる CPU /メモリのリソースの割り当てを自動的にスケールさせる機能
+
+###
+Liveness Probe は、Pod 内のコンテナが正常に動作していることを確認するためのヘルスチェック
