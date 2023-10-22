@@ -398,3 +398,8 @@ VerticalPodAutoscaler は、コンテ ナに割り当てる CPU /メモリのリ
 Liveness Probe は、Pod 内のコンテナが正常に動作していることを確認するためのヘルスチェック
 Readiness Probe は、Pod がリクエストを受け付けることができるかを確認するためのヘルスチェック
 Startup Probe は、Pod の初回起動が完了しているかどうかを確認するためのヘルスチェック
+
+###
+exec - コマンドを実行し、終了コードが 0 でなければ失敗
+httpGetHTTP - GET リクエストを実行し、Status Code が 200~399 でなければ失敗 
+TCP - セッションが確立できなければ失敗
