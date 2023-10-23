@@ -403,3 +403,8 @@ Startup Probe は、Pod の初回起動が完了しているかどうかを確�
 exec - コマンドを実行し、終了コードが 0 でなければ失敗
 httpGetHTTP - GET リクエストを実行し、Status Code が 200~399 でなければ失敗 
 TCP - セッションが確立できなければ失敗
+
+###
+Pod ready++ では、その Pod に対して ReadinessGate という追加のチェック項目 (spec.readinessGates)を設定する
+ReadinessGate がパスするまでは、Service の転送先に追加されない
+ローリングアップデート時には次の Pod の起動に移らない
