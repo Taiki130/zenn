@@ -408,3 +408,6 @@ TCP - セッションが確立できなければ失敗
 Pod ready++ では、その Pod に対して ReadinessGate という追加のチェック項目 (spec.readinessGates)を設定する
 ReadinessGate がパスするまでは、Service の転送先に追加されない
 ローリングアップデート時には次の Pod の起動に移らない
+
+###
+ReadinessProbe が失敗して いる場合でも Service に紐づけるようにするには、spec.publishNotReadyAddresses を true に設定
