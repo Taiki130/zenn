@@ -425,3 +425,6 @@ ReplicaSet の削除を行った場合の挙動
 ###
 ノードを SchedulingDisabled に変更し、スケジューラの候補から外す場合は「kubectl cordon」コ マンドを利用する
 SchedulingEnabled に変更し、スケジューリングの候補に戻す場合は「kubectl uncordon」 コマンドを利用する
+
+###
+ノード上で実行しているすべての Pod を退避させる排出処理(drain)を行うには、「kubectl drain」コマンドを利用する
