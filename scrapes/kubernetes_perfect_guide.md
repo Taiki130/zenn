@@ -411,3 +411,13 @@ ReadinessGate がパスするまでは、Service の転送先に追加されな�
 
 ###
 ReadinessProbe が失敗して いる場合でも Service に紐づけるようにするには、spec.publishNotReadyAddresses を true に設定
+
+###
+ReplicaSet の削除を行った場合の挙動
+- Background(デフォルト)
+    -  ReplicaSet を直ちに削除し、Pod はガベージコレクタがバックグラウンドで非同期に削除
+-  Foreground
+    - ReplicaSetを直ちに削除はせず、deletionTimestamp,metadata.finalizers=foregroundDeletionに設定
+    - ガベージコレクタが各 Pod で blockOwnerDeletion = true のものを削除する ・(false のものに関してはフォアグラウンド削除であってもバックグラウンドで削除) ・ すべて消し終わったあとに ReplicaSet を削除する
+- Orphan
+    - ReplicaSet 削除時に Pod の削除を行わない
