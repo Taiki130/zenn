@@ -421,3 +421,7 @@ ReplicaSet の削除を行った場合の挙動
     - ガベージコレクタが各 Pod で blockOwnerDeletion = true のものを削除する ・(false のものに関してはフォアグラウンド削除であってもバックグラウンドで削除) ・ すべて消し終わったあとに ReplicaSet を削除する
 - Orphan
     - ReplicaSet 削除時に Pod の削除を行わない
+
+###
+ノードを SchedulingDisabled に変更し、スケジューラの候補から外す場合は「kubectl cordon」コ マンドを利用する
+SchedulingEnabled に変更し、スケジューリングの候補に戻す場合は「kubectl uncordon」 コマンドを利用する
