@@ -428,3 +428,7 @@ SchedulingEnabled に変更し、スケジューリングの候補に戻す場�
 
 ###
 ノード上で実行しているすべての Pod を退避させる排出処理(drain)を行うには、「kubectl drain」コマンドを利用する
+
+###
+PodDisruptionBudget はノードが排出処理を行う際に、Pod を停止することのできる数を制限 するリソース
+PodDisruptionBudget を設定 しておくことで、条件にマッチする Pod の最小の起動数(spec.minAvailable)または最大の停止数(spec.maxUnavailable)を見ながら、ノード上からの Pod の追い出しを行うことが可能になる
