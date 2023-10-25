@@ -444,3 +444,7 @@ PodDisruptionBudget を設定 しておくことで、条件にマッチする P
     - 特定の Pod がいるドメイン(ノード、ゾーン、etc)上で実行す る
 - Inter-Pod Anti-Affinity
     - 特定の Pod がいないドメイン(ノード、ゾーン、etc)上で実行する
+
+###
+Node Affinity における必須スケジューリングポリシーと優先スケジューリングポリシー
+requiredDuringSchedulingIgnoredDuringExecution 必須のスケジューリングポリシー preferredDuringSchedulingIgnoredDuringExecution 優先的に考慮されるスケジューリングポリシー
