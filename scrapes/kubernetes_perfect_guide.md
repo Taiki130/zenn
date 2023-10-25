@@ -432,3 +432,15 @@ SchedulingEnabled に変更し、スケジューリングの候補に戻す場�
 ###
 PodDisruptionBudget はノードが排出処理を行う際に、Pod を停止することのできる数を制限 するリソース
 PodDisruptionBudget を設定 しておくことで、条件にマッチする Pod の最小の起動数(spec.minAvailable)または最大の停止数(spec.maxUnavailable)を見ながら、ノード上からの Pod の追い出しを行うことが可能になる
+
+###
+- nodeSelector(Simple Node Affinity) 
+    - 簡易的な Node Affinity 機能
+- Node Affinity 
+    - 特定のノード上だけで実行する
+- Node Anti-Affinity 
+    - 特定のノード以外で実行する
+- Inter-Pod Affinity　
+    - 特定の Pod がいるドメイン(ノード、ゾーン、etc)上で実行す る
+- Inter-Pod Anti-Affinity
+    - 特定の Pod がいないドメイン(ノード、ゾーン、etc)上で実行する
