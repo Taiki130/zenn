@@ -451,3 +451,13 @@ requiredDuringSchedulingIgnoredDuringExecution 必須のスケジューリング
 
 ###
 TopologySpreadConstraints では、指定したラベルを持つ Pod が特定のトポロジに対してどの程度 の偏りの許容を設定することでスケジューリングの制約を設ける
+
+###
+Taints / Tolerations
+対象のノードを特定の用途に向けた専用ノードにする場合などに利用する
+- PreferNoSchedule
+    - 可能な限りスケジューリングしない
+- NoSchedule
+    - スケジューリングしない(すでにスケジューリングされている Pod はそのまま)
+- NoExecute
+    - 実行を許可しない(すでにスケジューリングされている Pod は停止される)
