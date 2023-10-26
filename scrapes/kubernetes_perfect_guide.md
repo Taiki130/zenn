@@ -448,3 +448,6 @@ PodDisruptionBudget を設定 しておくことで、条件にマッチする P
 ###
 Node Affinity における必須スケジューリングポリシーと優先スケジューリングポリシー
 requiredDuringSchedulingIgnoredDuringExecution 必須のスケジューリングポリシー preferredDuringSchedulingIgnoredDuringExecution 優先的に考慮されるスケジューリングポリシー
+
+###
+TopologySpreadConstraints では、指定したラベルを持つ Pod が特定のトポロジに対してどの程度 の偏りの許容を設定することでスケジューリングの制約を設ける
