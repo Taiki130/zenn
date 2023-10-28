@@ -461,3 +461,6 @@ Taints / Tolerations
     - スケジューリングしない(すでにスケジューリングされている Pod はそのまま)
 - NoExecute
     - 実行を許可しない(すでにスケジューリングされている Pod は停止される)
+
+###
+ServiceAccount は Kubernetes の世界だけで完結するもので、Pod で実行されるプロセスのために割り当てるもの
