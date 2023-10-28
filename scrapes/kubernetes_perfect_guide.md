@@ -467,3 +467,6 @@ ServiceAccount は Kubernetes の世界だけで完結するもので、Pod で�
 
 ###
 imagePullSecrets が指定された ServiceAccount を割り当てた Pod が起動した場合、自動的に Pod の imagePullSecrets として利用する
+
+###
+RBAC(Role Based Access Control)は、どういった操作を許可するのかを定めた Role を作成し、 ServiceAccount などの User に対して Role を紐づける(RoleBinding)ことでその権限を付与する
