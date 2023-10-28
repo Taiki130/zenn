@@ -470,3 +470,6 @@ imagePullSecrets が指定された ServiceAccount を割り当てた Pod が起
 
 ###
 RBAC(Role Based Access Control)は、どういった操作を許可するのかを定めた Role を作成し、 ServiceAccount などの User に対して Role を紐づける(RoleBinding)ことでその権限を付与する
+
+Namespace レベルのリソースとして Role と RoleBinding
+Clusterレベルのリソースとして ClusterRole と ClusterRoleBinding がある
