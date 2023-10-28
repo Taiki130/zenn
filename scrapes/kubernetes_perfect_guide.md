@@ -464,3 +464,6 @@ Taints / Tolerations
 
 ###
 ServiceAccount は Kubernetes の世界だけで完結するもので、Pod で実行されるプロセスのために割り当てるもの
+
+###
+imagePullSecrets が指定された ServiceAccount を割り当てた Pod が起動した場合、自動的に Pod の imagePullSecrets として利用する
