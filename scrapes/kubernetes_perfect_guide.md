@@ -485,3 +485,15 @@ runAsUser 実行するユーザ
 runAsGroup 実行するグループ
 runAsNonRoot root での実行を拒否する
 seLinuxOptions SELinux のオプション
+
+###
+PodSecurityContext は、Pod(すべてのコンテナ)に対するセキュリティ設定(SecurityContext)
+
+runAsUser  実行するユーザ
+runAsGroup  実行するグループ
+runAsNonRoot root での実行を拒否する
+supplementalGroups  プライマリ GID に追加で付与する GID のリストを指定 
+fsGroup ファイルシステムのグループを指定 
+sysctls  上書きするカーネルパラメータを指定(Kubernetes v1.11 以降) 
+seLinuxOptions SELinux のオプションを指定
+
