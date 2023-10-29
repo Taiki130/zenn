@@ -499,3 +499,6 @@ seLinuxOptions SELinux のオプションを指定
 
 ###
 PodSecurityPolicy は、Kubernetes クラスタに対してセキュリティポリシーによる制限を行うリソース
+
+###
+NetworkPolicy は、Kubernetes クラスタ内で Pod 同士が通信する際のトラフィックルールを規定する
