@@ -473,3 +473,15 @@ RBAC(Role Based Access Control)は、どういった操作を許可するのか�
 
 Namespace レベルのリソースとして Role と RoleBinding
 Clusterレベルのリソースとして ClusterRole と ClusterRoleBinding がある
+
+###
+SecurityContext は、個々のコンテナに対するセキュリティ設定(SecurityContext)
+
+privileged 特権コンテナとして実行
+capabilities Capabilities の追加と削除 
+allowPrivilegeEscalation コンテナ実行時に親プロセス以上の権限を与えるかどうか 
+readOnlyRootFilesystem root ファイルシステムを ReadOnly にするかどうか 
+runAsUser 実行するユーザ
+runAsGroup 実行するグループ
+runAsNonRoot root での実行を拒否する
+seLinuxOptions SELinux のオプション
