@@ -497,3 +497,5 @@ fsGroup ファイルシステムのグループを指定
 sysctls  上書きするカーネルパラメータを指定(Kubernetes v1.11 以降) 
 seLinuxOptions SELinux のオプションを指定
 
+###
+PodSecurityPolicy は、Kubernetes クラスタに対してセキュリティポリシーによる制限を行うリソース
