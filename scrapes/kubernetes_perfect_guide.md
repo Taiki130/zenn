@@ -523,3 +523,7 @@ Pod の定義と PodPreset により追加される定義が、どれか1つで�
 kubesec は、Kubernetes の Secret を安全に管理するためのオープンソースソフトウェア
 GnuPG / Google Cloud KMS / AWS KMS を利用して Secret の暗号化を行うことが可能
 ファイル全体を暗号化するのではなく、Secret の構造(data.*)を保ったまま値だけ暗号化するため、可読性が優れている
+
+###
+SealedSecret は、Kubernetes の Secret を安全に管理するためのオープンソースソフトウェア
+暗号化された独自の SealedSecret リソースを作成しておき、クラスタに 登録すると、クラスタの内部で SealedSecret から Secret リソースに変換されるような仕組みになっている
