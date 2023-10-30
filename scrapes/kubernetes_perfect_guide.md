@@ -518,3 +518,8 @@ PodPreset は Admission Controller の一つで、Pod を作成する際にデ�
 てる
 
 Pod の定義と PodPreset により追加される定義が、どれか1つでも衝突する場合、PodPreset の書き換えは一切行われない
+
+###
+kubesec は、Kubernetes の Secret を安全に管理するためのオープンソースソフトウェア
+GnuPG / Google Cloud KMS / AWS KMS を利用して Secret の暗号化を行うことが可能
+ファイル全体を暗号化するのではなく、Secret の構造(data.*)を保ったまま値だけ暗号化するため、可読性が優れている
