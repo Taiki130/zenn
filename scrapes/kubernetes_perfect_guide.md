@@ -531,3 +531,6 @@ SealedSecret は、Kubernetes の Secret を安全に管理するためのオー
 ###
 ExternalSecret は、Kubernetes の Secret を安全に管理するためのオープンソースソフトウェア
 独自の ExternalSecret リソースを作成しておき、クラスタに登録すると、 クラスタの内部で ExternalSecret から Secret リソースに変換されるような仕組みになっている
+
+###
+Helm は、Kubernetes のパッケージマネージャ
