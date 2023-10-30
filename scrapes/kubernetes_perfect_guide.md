@@ -502,3 +502,10 @@ PodSecurityPolicy は、Kubernetes クラスタに対してセキュリティポ
 
 ###
 NetworkPolicy は、Kubernetes クラスタ内で Pod 同士が通信する際のトラフィックルールを規定する
+
+###
+Admission Control は、Kubernetes API サーバにリクエスト制御を追加で行う仕組み
+Kubernetes では Authentication / Authorization / Admission Control の 3 つのフェーズを通っ てリソースが登録される
+Authentication/AuthN(認証)では、正しいユーザであるか どうかをユーザ名とパスワードやトークンといったもので確認する
+Authorization/AuthZ(認可) では、そのユーザが行おうとしている要求について、実行可能な権限があるかの制御を行う
+Admission Control フェーズでは、別途そのリクエストの内容を許可するかどうかの判断や、受け取ったリソースの改変などを行って登録するなどが可能になる
