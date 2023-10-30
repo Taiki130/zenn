@@ -509,3 +509,12 @@ Kubernetes では Authentication / Authorization / Admission Control の 3 つ�
 Authentication/AuthN(認証)では、正しいユーザであるか どうかをユーザ名とパスワードやトークンといったもので確認する
 Authorization/AuthZ(認可) では、そのユーザが行おうとしている要求について、実行可能な権限があるかの制御を行う
 Admission Control フェーズでは、別途そのリクエストの内容を許可するかどうかの判断や、受け取ったリソースの改変などを行って登録するなどが可能になる
+
+###
+PodPreset は Admission Controller の一つで、Pod を作成する際にデフォルト設定を埋め込むリソース
+
+- 特定のラベルが付与されている Pod に対しては、自動的に環境変数を埋め込む
+- 特定のラベルが付与されている Pod に対しては、/var/log/領域に Persistent Volume を割り当
+てる
+
+Pod の定義と PodPreset により追加される定義が、どれか1つでも衝突する場合、PodPreset の書き換えは一切行われない
