@@ -8,6 +8,16 @@ published: true
 
 GitHubでKustomizeの差分を簡単に確認できるよう、**dyff**と**github-comment**を使って、Kustomizeリソースの変更内容を自動的にコメントするワークフローを作成しました。本記事では、このワークフローのセットアップと実行方法について解説します。
 
+## 実際のコメント例
+
+![](/images/20241101-kustomize-diff/comment.png)
+
+差分がある場合はコメントされ、詳細を開くと具体的な内容が書かれています。
+
+![](/images/20241101-kustomize-diff/hide.png)
+
+同一サービスで新たに差分があると、古いコメントはhide状態になります。
+
 ## 背景
 
 Kustomizeを使っていると、リソースの差分をレビューするのが面倒になることがあります。特に、レビュー中に差分がGitHub上に表示されない場合、手作業で確認するのは効率が悪くなりがちです。
@@ -136,16 +146,6 @@ github-comment exec -k diff -pr ${{ github.event.pull_request.number }} --config
 dyffの実行で、mainブランチとの差分がある場合にコメントします。`--omit-header`はdyff実行時に出力される不要なヘッダを削除。`—set-exit-code`は差分がある場合に異常終了するようにするオプションです。
 
 異常終了している場合のみgithub-commentを実行することで、差分がある場合だけコメントする、という機構を実現してます。
-
-## 実際のコメント例
-
-![](/images/20241101-kustomize-diff/comment.png)
-
-差分がある場合はコメントされ、詳細を開くと具体的な内容が書かれています。
-
-![](/images/20241101-kustomize-diff/hide.png)
-
-同一サービスで新たに差分があると、古いコメントはhide状態になります。
 
 ## 余談
 
