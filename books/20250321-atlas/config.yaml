@@ -1,0 +1,17 @@
+title: "Atlasで始めるモダンなDBマイグレーション入門"
+summary: "データベースのスキーマ変更・管理は、アプリケーションの成長に伴い複雑化します。Atlasは、その課題を克服するためのモダンなDBマイグレーションツールです。差分の自動検出、柔軟なスキーマ定義、GitやCI/CDとの統合などの強みを持ち、スキーマ管理を安全かつ効率的に行えます。本書は、Atlasをこれから導入したい開発者やマイグレーション管理に課題を感じているエンジニアを対象に、基本的な使い方から実践的な活用方法までを解説します。"
+topics: ["atlas"]
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - intro
+  - basics
+  - setup
+  - schema-migration
+  - drift
+  - workflow
+  - advanced
+  - orm
+  - trouble-shoot
+  - conclusion
